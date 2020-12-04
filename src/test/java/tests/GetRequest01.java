@@ -29,20 +29,20 @@ public class GetRequest01 extends TestBase {
                 then().
                 assertThat().
                 statusCode(200);
-
-        JsonPath json = response.jsonPath();
-        List<Integer> allActualBookingid= json.getList("bookingid");
-        System.out.println("Tum bookingidler: " + allActualBookingid);
-
-        List<Integer> expectedBookingid = new ArrayList<>();
-        expectedBookingid.add(1);
-        expectedBookingid.add(11);
-        expectedBookingid.add(4);
-        System.out.println("Expected bookingid: " + expectedBookingid);
-
-        // Verilen Bookingid lerin actaul listte bulundugunu verify edelim.
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(allActualBookingid.containsAll(expectedBookingid));
-        softAssert.assertAll();
+//
+//        JsonPath json = response.jsonPath();
+//        List<Integer> allActualBookingid= json.getList("bookingid");
+//        System.out.println("Tum bookingidler: " + allActualBookingid);
+//
+//        List<Integer> expectedBookingid = new ArrayList<>();
+//        expectedBookingid.add(1);
+//        expectedBookingid.add(11);
+//        expectedBookingid.add(4);
+//        System.out.println("Expected bookingid: " + expectedBookingid);
+//
+//        // Verilen Bookingid lerin actaul listte bulundugunu verify edelim.
+//        SoftAssert softAssert = new SoftAssert();
+//        softAssert.assertTrue(allActualBookingid.containsAll(expectedBookingid));
+//        softAssert.assertAll();
     }
 }
